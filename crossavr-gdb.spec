@@ -10,20 +10,17 @@ Summary(uk):	óÉÍ×ÏÌØÎÉÊ ×¦ÄÌÁÄÞÉË ÄÌÑ ó ÔÁ ¦ÎÛÉÈ ÍÏ×
 Summary(zh_CN):	[¿ª·¢]CºÍÆäËûÓïÑÔµÄµ÷ÊÔÆ÷
 Summary(zh_TW):	[.-A¶}µo]C©M.$)B¨ä.-A¥L»y.$)B¨¥ªº½Õ¸Õ¾¹
 Name:		crossavr-gdb
-Version:	6.0
+Version:	6.1.1
 Release:	0.1
 License:	GPL
 Group:		Development/Debuggers
-Source0:	ftp://ftp.gnu.org/pub/gnu/gdb/gdb-%{version}.tar.gz
-# Source0-md5:	e2314b7c9c7670b5384deb90701446f4
-Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/gdb-non-english-man-pages.tar.bz2
-# Source1-md5:	2e8a48939ae282c12bbacdd54e398247
+Source0:	ftp://ftp.gnu.org/gnu/gdb/gdb-%{version}.tar.bz2
+# Source0-md5:	dd25473f61a3a2e1b08dee5f67ebae28
 Patch0:		gdb-ncurses.patch
 Patch1:		gdb-readline.patch
 Patch2:		gdb-info.patch
-Patch3:		gdb-procfs.patch
-Patch4:		gdb-passflags.patch
-Patch5:		gdb-sparc-workaround.patch
+Patch3:		gdb-passflags.patch
+Patch4:		gdb-headers.patch
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
@@ -32,12 +29,7 @@ BuildRequires:	ncurses-devel >= 5.2
 BuildRequires:	readline-devel >= 4.2
 BuildRoot:	%{tmpdir}/gdb-%{version}-root-%(id -u -n)
 
-%define         cxx             0
 %define         target          avr
-%define         _prefix         /usr
-%define         arch            %{_prefix}/%{target}
-%define         gccarch         %{_prefix}/lib/gcc-lib/%{target}
-%define         gcclib          %{_prefix}/lib/gcc-lib/%{target}/%{version}
 
 %description
 Gdb is a full featured, command driven debugger. Gdb allows you to
@@ -98,14 +90,12 @@ verir.
 %patch2 -p1
 %patch3 -p1
 %patch4 -p1
-%patch5 -p1
 
 %build
 for dir in `find gdb/ -name 'configure.in'`; do
 	dir=$(dirname "$dir")
 	olddir=$(pwd)
 	cd $dir
-	rm -f aclocal.m4
 	%{__aclocal}
 	%{__autoconf}
 	cd $olddir
@@ -142,7 +132,7 @@ cd ..
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_infodir}
 
-%{__make} install install-info \
+%{__make} install \
 	prefix=$RPM_BUILD_ROOT%{_prefix} \
 	bindir=$RPM_BUILD_ROOT%{_bindir} \
 	sbindir=$RPM_BUILD_ROOT%{_sbindir} \
@@ -156,21 +146,7 @@ bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post
-[ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
-
-%postun
-[ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
-
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_bindir}/*
-
-%{_mandir}/man1/*
-%lang(es) %{_mandir}/es/man1/*
-%lang(fr) %{_mandir}/fr/man1/*
-%lang(hu) %{_mandir}/hu/man1/*
-%lang(ja) %{_mandir}/ja/man1/*
-%lang(pl) %{_mandir}/pl/man1/*
-#%{_infodir}/gdb*.info*
-#%{_infodir}/stabs*.info*
+%attr(755,root,root) %{_bindir}/%{target}-gdb*
+%{_mandir}/man1/%{target}-gdb*.1*
