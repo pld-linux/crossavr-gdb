@@ -10,12 +10,12 @@ Summary(uk):	óÉÍ×ÏÌØÎÉÊ ×¦ÄÌÁÄŞÉË ÄÌÑ ó ÔÁ ¦ÎÛÉÈ ÍÏ×
 Summary(zh_CN):	[¿ª·¢]CºÍÆäËûÓïÑÔµÄµ÷ÊÔÆ÷
 Summary(zh_TW):	[.-A¶}µo]C©M.$)B¨ä.-A¥L»y.$)B¨¥ªº½Õ¸Õ¾¹
 Name:		crossavr-gdb
-Version:	6.1.1
+Version:	6.2
 Release:	0.1
 License:	GPL
 Group:		Development/Debuggers
 Source0:	ftp://ftp.gnu.org/gnu/gdb/gdb-%{version}.tar.bz2
-# Source0-md5:	dd25473f61a3a2e1b08dee5f67ebae28
+# Source0-md5:	01871f7667345262e317a1e6e1a32768
 Patch0:		gdb-ncurses.patch
 Patch1:		gdb-readline.patch
 Patch2:		gdb-info.patch
