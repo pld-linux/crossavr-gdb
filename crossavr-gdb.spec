@@ -29,7 +29,7 @@ BuildRequires:	ncurses-devel >= 5.2
 BuildRequires:	readline-devel >= 4.2
 BuildRoot:	%{tmpdir}/gdb-%{version}-root-%(id -u -n)
 
-%define         target          avr
+%define		target		avr
 
 %description
 Gdb is a full featured, command driven debugger. Gdb allows you to
