@@ -10,12 +10,12 @@ Summary(uk):	Символьний в╕дладчик для С та ╕нших мов
 Summary(zh_CN):	[©╙╥╒]C╨мфДкШсОят╣д╣ВйтфВ
 Summary(zh_TW):	[.-A╤}╣o]C╘M.$)B╗Д.-A╔L╩y.$)B╗╔╙╨╫у╦у╬╧
 Name:		crossavr-gdb
-Version:	6.2
+Version:	6.2.1
 Release:	0.1
 License:	GPL
 Group:		Development/Debuggers
 Source0:	ftp://ftp.gnu.org/gnu/gdb/gdb-%{version}.tar.bz2
-# Source0-md5:	01871f7667345262e317a1e6e1a32768
+# Source0-md5:	3b3898cfd426e1acd5efc89560aa93ba
 Patch0:		gdb-ncurses.patch
 Patch1:		gdb-readline.patch
 Patch2:		gdb-info.patch
