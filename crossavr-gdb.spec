@@ -172,5 +172,5 @@ rm -rf $RPM_BUILD_ROOT
 %lang(hu) %{_mandir}/hu/man1/*
 %lang(ja) %{_mandir}/ja/man1/*
 %lang(pl) %{_mandir}/pl/man1/*
-%{_infodir}/gdb*.info*
-%{_infodir}/stabs*.info*
+#%{_infodir}/gdb*.info*
+#%{_infodir}/stabs*.info*
