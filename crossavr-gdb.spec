@@ -43,7 +43,7 @@ inneren Zustand überprüfen können. Er funktioniert für C und mit GNU C
 kompiliertes C++.
 
 %description -l es
-Este es un debugger orientado a comandos repleto de características.
+Este es un depurador orientado a comandos repleto de características.
 Te permite rastrear la ejecución de programas y examinar su estado
 interno a cualquier momento. Funciona para C y C++ compilado con el
 compilador GNU C.
