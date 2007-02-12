@@ -1,14 +1,14 @@
 Summary:	A GNU source-level debugger for C, C++ and Fortran
-Summary(de):	Symbolischer Debugger fЭr C und andere Sprachen
-Summary(es):	Depurador de programas C y otras lenguajes
-Summary(fr):	DИbugger symbolique pour C et d'autres langages
-Summary(pl):	Symboliczny odpluskwiacz dla C i innych jЙzykСw
-Summary(pt_BR):	Depurador de programas C e outras linguagens
-Summary(ru):	Символический отладчик для C и других языков
-Summary(tr):	C ve diПer diller iГin sembolik hata ayЩklayЩcЩ
-Summary(uk):	Символьний в╕дладчик для С та ╕нших мов
-Summary(zh_CN):	[©╙╥╒]C╨мфДкШсОят╣д╣ВйтфВ
-Summary(zh_TW):	[.-A╤}╣o]C╘M.$)B╗Д.-A╔L╩y.$)B╗╔╙╨╫у╦у╬╧
+Summary(de.UTF-8):   Symbolischer Debugger fц╪r C und andere Sprachen
+Summary(es.UTF-8):   Depurador de programas C y otras lenguajes
+Summary(fr.UTF-8):   Dц╘bugger symbolique pour C et d'autres langages
+Summary(pl.UTF-8):   Symboliczny odpluskwiacz dla C i innych jд≥zykцЁw
+Summary(pt_BR.UTF-8):   Depurador de programas C e outras linguagens
+Summary(ru.UTF-8):   п║п╦п╪п╡п╬п╩п╦я┤п╣я│п╨п╦п╧ п╬я┌п╩п╟п╢я┤п╦п╨ п╢п╩я▐ C п╦ п╢я─я┐пЁп╦я┘ я▐п╥я▀п╨п╬п╡
+Summary(tr.UTF-8):   C ve diд÷er diller iц╖in sembolik hata ayд╠klayд╠cд╠
+Summary(uk.UTF-8):   п║п╦п╪п╡п╬п╩я▄п╫п╦п╧ п╡я√п╢п╩п╟п╢я┤п╦п╨ п╢п╩я▐ п║ я┌п╟ я√п╫я┬п╦я┘ п╪п╬п╡
+Summary(zh_CN.UTF-8):   [Е╪─Е▐▒]CЕ▓▄Е┘╤Д╩√Х╞╜Х╗─Г └Х╟┐Х╞∙Е≥╗
+Summary(zh_TW.UTF-8):   [.-AИ√▀Г≥╪]CЕ▓▄.$)BЕ┘╤.-AД╩√Х╙·.$)BХ╗─Г └Х╙©Х╘╕Е≥╗
 Name:		crossavr-gdb
 Version:	6.2.1
 Release:	0.1
@@ -38,51 +38,51 @@ trace the execution of programs and examine their internal state at
 any time. Gdb works for C and C++ compiled with the GNU C compiler
 gcc.
 
-%description -l de
-dem Sie die AusfЭhrung von Programmen verfolgen und jederzeit den
-inneren Zustand ЭberprЭfen kЖnnen. Er funktioniert fЭr C und mit GNU C
+%description -l de.UTF-8
+dem Sie die Ausfц╪hrung von Programmen verfolgen und jederzeit den
+inneren Zustand ц╪berprц╪fen kц╤nnen. Er funktioniert fц╪r C und mit GNU C
 kompiliertes C++.
 
-%description -l es
-Este es un depurador orientado a comandos repleto de caracterМsticas.
-Te permite rastrear la ejecuciСn de programas y examinar su estado
+%description -l es.UTF-8
+Este es un depurador orientado a comandos repleto de caracterц╜sticas.
+Te permite rastrear la ejecuciцЁn de programas y examinar su estado
 interno a cualquier momento. Funciona para C y C++ compilado con el
 compilador GNU C.
 
-%description -l fr
-DИbugger complet, pilotИ par commandes. Permet de tracer l'exИcution
-des programmes et d'examiner Ю tout moment leur Иtat interne.
-Fonctionne avec les binaires C et C++ compilИs avec le compilateur C
+%description -l fr.UTF-8
+Dц╘bugger complet, pilotц╘ par commandes. Permet de tracer l'exц╘cution
+des programmes et d'examiner ц═ tout moment leur ц╘tat interne.
+Fonctionne avec les binaires C et C++ compilц╘s avec le compilateur C
 de GNU, gcc.
 
-%description -l pl
-Gdb jest rozbudowanym odpluskwiaczem (debuggerem), pozwalaj╠cym
-╤ledziФ wykonywanie programu i badaФ jego stan wewnЙtrzny. Gdb
-umo©liwia odpluskwianie programСw napisanych w C/C++ i skompilowanych
+%description -l pl.UTF-8
+Gdb jest rozbudowanym odpluskwiaczem (debuggerem), pozwalajд┘cym
+е⌡ledziд┤ wykonywanie programu i badaд┤ jego stan wewnд≥trzny. Gdb
+umoе╪liwia odpluskwianie programцЁw napisanych w C/C++ i skompilowanych
 przy pomocy kompilatora GNU (gcc).
 
-%description -l pt_BR
-Este И um debugger orientado a comandos repleto de caracterМsticas.
-Ele permite Ю vocЙ rastrear a execuГЦo de programas e examinar o seu
+%description -l pt_BR.UTF-8
+Este ц╘ um debugger orientado a comandos repleto de caracterц╜sticas.
+Ele permite ц═ vocц╙ rastrear a execuц╖цёo de programas e examinar o seu
 estado interno a qualquer momento. Ele funciona para para C e C++
 compilado com o compilador GNU C.
 
-%description -l ru
-Это полноценный отладчик, управляемый командами. Он позволяет
-трассировать исполнение программ и изучать их внутреннее состояние в
-любой момент времени. Работает с программами на C и C++,
-скомпилированными GNU компилятором C (gcc, egcs, pgcc).
+%description -l ru.UTF-8
+п╜я┌п╬ п©п╬п╩п╫п╬я├п╣п╫п╫я▀п╧ п╬я┌п╩п╟п╢я┤п╦п╨, я┐п©я─п╟п╡п╩я▐п╣п╪я▀п╧ п╨п╬п╪п╟п╫п╢п╟п╪п╦. п·п╫ п©п╬п╥п╡п╬п╩я▐п╣я┌
+я┌я─п╟я│я│п╦я─п╬п╡п╟я┌я▄ п╦я│п©п╬п╩п╫п╣п╫п╦п╣ п©я─п╬пЁя─п╟п╪п╪ п╦ п╦п╥я┐я┤п╟я┌я▄ п╦я┘ п╡п╫я┐я┌я─п╣п╫п╫п╣п╣ я│п╬я│я┌п╬я▐п╫п╦п╣ п╡
+п╩я▌п╠п╬п╧ п╪п╬п╪п╣п╫я┌ п╡я─п╣п╪п╣п╫п╦. п═п╟п╠п╬я┌п╟п╣я┌ я│ п©я─п╬пЁя─п╟п╪п╪п╟п╪п╦ п╫п╟ C п╦ C++,
+я│п╨п╬п╪п©п╦п╩п╦я─п╬п╡п╟п╫п╫я▀п╪п╦ GNU п╨п╬п╪п©п╦п╩я▐я┌п╬я─п╬п╪ C (gcc, egcs, pgcc).
 
-%description -l tr
-Bir komut arayЭzЭ Эzerinden programcЩya programЩnЩ adЩm adЩm izleme
-(trace) ve herhangi bir anda programЩn durumunu inceleme olanaПЩ
+%description -l tr.UTF-8
+Bir komut arayц╪zц╪ ц╪zerinden programcд╠ya programд╠nд╠ adд╠m adд╠m izleme
+(trace) ve herhangi bir anda programд╠n durumunu inceleme olanaд÷д╠
 verir.
 
-%description -l uk
-Це повноц╕нний в╕дладчик, що керу╓ться командами. В╕н дозволя╓
-трасувати виконання програм та вивчати ╖х внутр╕шн╕й стан в дов╕льний
-момент часу. Працю╓ з програмами на C та C++, зкомп╕льованими
-комп╕ляторами GNU C (gcc, egcs, pgcc).
+%description -l uk.UTF-8
+п╕п╣ п©п╬п╡п╫п╬я├я√п╫п╫п╦п╧ п╡я√п╢п╩п╟п╢я┤п╦п╨, я┴п╬ п╨п╣я─я┐я■я┌я▄я│я▐ п╨п╬п╪п╟п╫п╢п╟п╪п╦. п▓я√п╫ п╢п╬п╥п╡п╬п╩я▐я■
+я┌я─п╟я│я┐п╡п╟я┌п╦ п╡п╦п╨п╬п╫п╟п╫п╫я▐ п©я─п╬пЁя─п╟п╪ я┌п╟ п╡п╦п╡я┤п╟я┌п╦ я≈я┘ п╡п╫я┐я┌я─я√я┬п╫я√п╧ я│я┌п╟п╫ п╡ п╢п╬п╡я√п╩я▄п╫п╦п╧
+п╪п╬п╪п╣п╫я┌ я┤п╟я│я┐. п÷я─п╟я├я▌я■ п╥ п©я─п╬пЁя─п╟п╪п╟п╪п╦ п╫п╟ C я┌п╟ C++, п╥п╨п╬п╪п©я√п╩я▄п╬п╡п╟п╫п╦п╪п╦
+п╨п╬п╪п©я√п╩я▐я┌п╬я─п╟п╪п╦ GNU C (gcc, egcs, pgcc).
 
 %prep
 %setup -q -n gdb-%{version}
