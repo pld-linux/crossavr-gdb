@@ -10,17 +10,15 @@ Summary(uk.UTF-8):	Символьний відладчик для С та інш
 Summary(zh_CN.UTF-8):	[开发]C和其他语言的调试器
 Summary(zh_TW.UTF-8):	[.-A開發]C和.$)B其.-A他語.$)B言的調試器
 Name:		crossavr-gdb
-Version:	6.2.1
-Release:	0.1
+Version:	6.6
+Release:	1
 License:	GPL
 Group:		Development/Debuggers
 Source0:	ftp://ftp.gnu.org/gnu/gdb/gdb-%{version}.tar.bz2
-# Source0-md5:	3b3898cfd426e1acd5efc89560aa93ba
-Patch0:		gdb-ncurses.patch
-Patch1:		gdb-readline.patch
-Patch2:		gdb-info.patch
-Patch3:		gdb-passflags.patch
-Patch4:		gdb-headers.patch
+# Source0-md5:	a4df41d28dd514d64e8ccbfe125fd9a6
+Patch0:		gdb-readline.patch
+Patch1:		gdb-info.patch
+Patch2:		gdb-passflags.patch
 BuildRequires:	XFree86-devel
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
@@ -89,8 +87,6 @@ verir.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
-%patch3 -p1
-%patch4 -p1
 
 %build
 for dir in `find gdb/ -name 'configure.in'`; do
