@@ -10,12 +10,12 @@ Summary(uk.UTF-8):	Символьний відладчик для С та інш
 Summary(zh_CN.UTF-8):	[开发]C和其他语言的调试器
 Summary(zh_TW.UTF-8):	[.-A開發]C和.$)B其.-A他語.$)B言的調試器
 Name:		crossavr-gdb
-Version:	6.6
+Version:	6.7.1
 Release:	1
 License:	GPL
 Group:		Development/Debuggers
 Source0:	ftp://ftp.gnu.org/gnu/gdb/gdb-%{version}.tar.bz2
-# Source0-md5:	a4df41d28dd514d64e8ccbfe125fd9a6
+# Source0-md5:	30a6bf36eded4ae5a152d7d71b86dc14
 Patch0:		gdb-readline.patch
 Patch1:		gdb-info.patch
 Patch2:		gdb-passflags.patch
