@@ -14,7 +14,7 @@ Version:	6.7.1
 Release:	1
 License:	GPL
 Group:		Development/Debuggers
-Source0:	ftp://ftp.gnu.org/gnu/gdb/gdb-%{version}.tar.bz2
+Source0:	http://ftp.gnu.org/gnu/gdb/gdb-%{version}.tar.bz2
 # Source0-md5:	30a6bf36eded4ae5a152d7d71b86dc14
 Patch0:		gdb-readline.patch
 Patch1:		gdb-info.patch
