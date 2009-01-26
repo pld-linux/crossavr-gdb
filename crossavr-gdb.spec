@@ -9,23 +9,29 @@ Summary(tr.UTF-8):	C ve diğer diller için sembolik hata ayıklayıcı
 Summary(uk.UTF-8):	Символьний відладчик для С та інших мов
 Summary(zh_CN.UTF-8):	[开发]C和其他语言的调试器
 Summary(zh_TW.UTF-8):	[.-A開發]C和.$)B其.-A他語.$)B言的調試器
+%define	snap	20090120
 Name:		crossavr-gdb
-Version:	6.7.1
-Release:	1
-License:	GPL
+Version:	6.8.50
+Release:	0.%{snap}.1
+License:	GPL v3+
 Group:		Development/Debuggers
-Source0:	http://ftp.gnu.org/gnu/gdb/gdb-%{version}.tar.bz2
+#Source0:	http://ftp.gnu.org/gnu/gdb/gdb-%{version}.tar.bz2
+Source0:	ftp://sourceware.org/pub/gdb/snapshots/current/gdb-%{version}.%{snap}.tar.bz2
 # Source0-md5:	30a6bf36eded4ae5a152d7d71b86dc14
 Patch0:		gdb-readline.patch
 Patch1:		gdb-info.patch
 Patch2:		gdb-passflags.patch
-BuildRequires:	XFree86-devel
+Patch4:		gdb-gdbinit-stat.patch
+Patch5:		gdb-pretty-print-by-default.patch
+Patch6:		gdb-absolute-gnu_debuglink-path.patch
+URL:		http://www.gnu.org/software/gdb/
 BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
+BuildRequires:	bison
+BuildRequires:	flex
 BuildRequires:	libtool
 BuildRequires:	ncurses-devel >= 5.2
-BuildRequires:	readline-devel >= 4.2
-BuildRequires:	texinfo
+BuildRequires:	readline-devel >= 4.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		target		avr
@@ -83,44 +89,43 @@ verir.
 компіляторами GNU C (gcc, egcs, pgcc).
 
 %prep
-%setup -q -n gdb-%{version}
+%setup -q -n gdb-%{version}.%{snap}
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch4 -p0
+%patch5 -p1
+%patch6 -p1
 
 %build
 for dir in `find gdb/ -name 'configure.in'`; do
 	dir=$(dirname "$dir")
 	olddir=$(pwd)
 	cd $dir
+	rm -f aclocal.m4
 	%{__aclocal}
 	%{__autoconf}
 	cd $olddir
 done
 cp -f /usr/share/automake/config.* .
-# !! Don't enable shared here !!
-# This will cause serious problems --misiek
-%configure2_13 \
-	--target=%{target} \
+# don't --enable-shared here, there would be libs version mismatch with binutils
+%configure \
+    --target=%{target} \
+	--disable-gdbtk \
 	--disable-shared \
-	--enable-nls \
-	--without-included-gettext \
-	--without-included-regex \
-	--enable-gdcli \
+	--enable-gdbcli \
 	--enable-gdbmi \
 	--enable-multi-ice \
 	--enable-netrom \
-	--with-cpu=%{_target_cpu} \
+	--enable-nls \
 	--enable-tui \
+	--with-cpu=%{_target_cpu} \
 %ifnarch alpha
-	--with-mmalloc
+	--with-mmalloc \
 %endif
-
-# something is wrong after above - e.g. $exeext=="no" - fix it:
-cd gdb
-%configure \
-	--target=%{target}
-cd ..
+	--without-included-gettext \
+	--without-included-regex \
+	--without-x
 
 %{__make}
 %{__make} info
@@ -138,7 +143,6 @@ install -d $RPM_BUILD_ROOT%{_infodir}
 	libdir=$RPM_BUILD_ROOT%{_libdir} \
 	mandir=$RPM_BUILD_ROOT%{_mandir}
 
-bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
