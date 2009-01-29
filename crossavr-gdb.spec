@@ -111,7 +111,7 @@ done
 cp -f /usr/share/automake/config.* .
 # don't --enable-shared here, there would be libs version mismatch with binutils
 %configure \
-    --target=%{target} \
+	--target=%{target} \
 	--disable-gdbtk \
 	--disable-shared \
 	--enable-gdbcli \
@@ -143,7 +143,6 @@ install -d $RPM_BUILD_ROOT%{_infodir}
 	includedir=$RPM_BUILD_ROOT%{_includedir} \
 	libdir=$RPM_BUILD_ROOT%{_libdir} \
 	mandir=$RPM_BUILD_ROOT%{_mandir}
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
